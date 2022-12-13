@@ -94,10 +94,23 @@
                         <div class="row">
                             <div class="col-md-8 col-sm-12">
                                 <h2 class="tm-block-title d-inline-block">Liste des étudiants</h2>
+                        
+                                <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Numéro étudiants" title="Type in a name">
 
                             </div>
                             <div class="col-md-4 col-sm-12 text-right">
-                                <a href="add-product.html" class="btn btn-small btn-primary">Filtre</a>
+                                <!-- <a href="add-product.html" class="btn btn-small btn-primary">Filtre</a> -->
+                                <li class="btn btn-small btn-primary">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                                        aria-expanded="false">
+                                        Filtre
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="accounts.html"> Modifier le profil</a>
+                                        <a class="dropdown-item" href="#">Historique Entreprise </a>
+                                        <a class="dropdown-item" href="#">Mode Sombre</a>
+                                    </div>
+                                </li>
                             </div>
                         </div>
                         <div class="table-responsive">
@@ -107,16 +120,19 @@
                                         <th scope="col">Numéro étudiants</th>
                                         <th scope="col">Nom Prénom</th>
                                         <th scope="col" class="text-center">Formation</th>
+                                        <th scope="col" class="text-center">Groupe</th>
                                         <th scope="col" class="text-center">Stage</th>
                                         <th scope="col">Etat</th>
                                     </tr>
                                 </thead>
-                                <tbody>
+
+                                <tbody id ="myTable">
                                     <tr>
                                         <td class="tm-product-name">12104123</td>
                                         <td class="tm-product-name">CHAMI Bilal</td>
                                         <td class="text-center">BUT2 info</td>
-                                        <td class="text-center">En cours</td>
+                                        <td class="text-center">Athos2022</td>
+                                        <td class="text-center">En recherche</td>
                                         <th scope="row">
                                             <input type="checkbox" aria-label="Checkbox">
                                         </th>
@@ -125,6 +141,7 @@
                                         <td class="tm-product-name">12104445</td>
                                         <td class="tm-product-name">POSTIC Kevin</td>
                                         <td class="text-center">BUT2 info</td>
+                                        <td class="text-center">porthos2022</td>
                                         <td class="text-center">Microsoft dev web</td>
                                         <th scope="row">
                                             <input type="checkbox" aria-label="Checkbox">
@@ -134,7 +151,8 @@
                                         <td class="tm-product-name">12104123</td>
                                         <td class="tm-product-name">CHAMI Bilal</td>
                                         <td class="text-center">BUT2 info</td>
-                                        <td class="text-center">En cours</td>
+                                        <td class="text-center">Athos2022</td>
+                                        <td class="text-center">En recherche</td>
                                         <th scope="row">
                                             <input type="checkbox" aria-label="Checkbox">
                                         </th>
@@ -143,7 +161,8 @@
                                         <td class="tm-product-name">12104123</td>
                                         <td class="tm-product-name">CHAMI Bilal</td>
                                         <td class="text-center">BUT2 info</td>
-                                        <td class="text-center">En cours</td>
+                                        <td class="text-center">Athos2022</td>
+                                        <td class="text-center">En recherche</td>
                                         <th scope="row">
                                             <input type="checkbox" aria-label="Checkbox">
                                         </th>
@@ -152,7 +171,8 @@
                                         <td class="tm-product-name">12104123</td>
                                         <td class="tm-product-name">CHAMI Bilal</td>
                                         <td class="text-center">BUT2 info</td>
-                                        <td class="text-center">En cours</td>
+                                        <td class="text-center">Athos2022</td>
+                                        <td class="text-center">En recherche</td>
                                         <th scope="row">
                                             <input type="checkbox" aria-label="Checkbox">
                                         </th>
@@ -161,7 +181,8 @@
                                         <td class="tm-product-name">12104123</td>
                                         <td class="tm-product-name">CHAMI Bilal</td>
                                         <td class="text-center">BUT2 info</td>
-                                        <td class="text-center">En cours</td>
+                                        <td class="text-center">Athos2022</td>
+                                        <td class="text-center">En recherche</td>
                                         <th scope="row">
                                             <input type="checkbox" aria-label="Checkbox">
                                         </th>
@@ -170,7 +191,8 @@
                                         <td class="tm-product-name">12104123</td>
                                         <td class="tm-product-name">CHAMI Bilal</td>
                                         <td class="text-center">BUT2 info</td>
-                                        <td class="text-center">En cours</td>
+                                        <td class="text-center">Athos2022</td>
+                                        <td class="text-center">En recherche</td>
                                         <th scope="row">
                                             <input type="checkbox" aria-label="Checkbox">
                                         </th>
@@ -179,7 +201,8 @@
                                         <td class="tm-product-name">12104123</td>
                                         <td class="tm-product-name">CHAMI Bilal</td>
                                         <td class="text-center">BUT2 info</td>
-                                        <td class="text-center">En cours</td>
+                                        <td class="text-center">Athos2022</td>
+                                        <td class="text-center">En recherche</td>
                                         <th scope="row">
                                             <input type="checkbox" aria-label="Checkbox">
                                         </th>
@@ -234,6 +257,17 @@
             });
         })
     </script>
+
+     <script>
+        $(document).ready(function(){
+          $("#myInput").on("keyup", function() {
+            var value = $(this).val().toLowerCase();
+            $("#myTable tr").filter(function() {
+              $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            });
+          });
+        });
+        </script> 
 </body>
 
 </html>
