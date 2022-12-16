@@ -92,7 +92,7 @@
                             <div class="col-md-8 col-sm-12">
                                 <h2 class="tm-block-title d-inline-block">Liste des étudiants</h2>
                         
-                                <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Numéro étudiants" title="Type in a name">
+                                <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Recherche" title="Type in a name">
 
                             </div>
                             <div class="col-md-4 col-sm-12 text-right">
@@ -232,7 +232,7 @@
                 </div>
             </div>
 
-            <!--Footer-->
+            <!--Footer
             <footer class="row tm-mt-small">
                 <div class="col-12 font-weight-light">
                     <p class="d-inline-block tm-bg-black text-white py-2 px-4">
@@ -240,7 +240,7 @@
                         <a rel="nofollow" href="https://www.tooplate.com" class="text-white tm-footer-link">Tooplate</a>
                     </p>
                 </div>
-            </footer>
+            </footer>-->
         </div>
     </div>
     <script src="js/jquery-3.3.1.min.js"></script>
@@ -254,6 +254,18 @@
             });
         })
     </script>
+
+     <script>
+        $(document).ready(function(){
+          $("#myInput").on("keyup", function() {
+            var value = $(this).val().toLowerCase();
+            $("#myTable tr").filter(function() {
+              $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            });
+          });
+        });
+        </script> 
 </body>
 
 </html>
+
