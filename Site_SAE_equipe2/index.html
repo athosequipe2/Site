@@ -30,9 +30,9 @@
             <div class="row">
                 <div class="col-12">
                     <nav class="navbar navbar-expand-xl navbar-light bg-light">
-                        <a class="navbar-brand" href="#">
-                            <i class="fas fa-3x fa-tachometer-alt tm-site-icon"></i>
-                            <h1 class="tm-site-title mb-0">Dashboard</h1>
+                        <a class="navbar-brand" href="index.html">
+                            <object data="img/1200px-Uspn.png" width="325" height="200"> </object>
+                            <!--<h1 class="tm-site-title mb-0"></h1>-->
                         </a>
                         <button class="navbar-toggler ml-auto mr-0" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                             aria-expanded="false" aria-label="Toggle navigation">
@@ -41,38 +41,39 @@
 
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav mx-auto">
-                                <li class="nav-item">
-                                    <a class="nav-link active" href="#">Dashboard
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="index.html">Acceuil 
                                         <span class="sr-only">(current)</span>
                                     </a>
                                 </li>
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
-                                        aria-expanded="false">
-                                        Reports
-                                    </a>
-                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                        <a class="dropdown-item" href="#">Daily Report</a>
-                                        <a class="dropdown-item" href="#">Weekly Report</a>
-                                        <a class="dropdown-item" href="#">Yearly Report</a>
-                                    </div>
-                                </li>
+
                                 <li class="nav-item">
-                                    <a class="nav-link" href="products.html">Products</a>
+                                    <a class="nav-link" href="products.html">BOS</a>
                                 </li>
 
                                 <li class="nav-item">
-                                    <a class="nav-link" href="accounts.html">Accounts</a>
+                                    <a class="nav-link" href="etudiant.html">Etudiants</a>
                                 </li>
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
                                         aria-expanded="false">
-                                        Settings
+                                        Paramètres
                                     </a>
                                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                        <a class="dropdown-item" href="#">Profile</a>
-                                        <a class="dropdown-item" href="#">Billing</a>
-                                        <a class="dropdown-item" href="#">Customize</a>
+                                        <a class="dropdown-item" href="accounts.html"> Modifier le profil</a>
+                                        <a class="dropdown-item" href="Entreprise.html">Historique Entreprise </a>
+                                        <a class="dropdown-item" href="#">Mode Sombre</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                                        aria-expanded="false">
+                                        <object data="img/bell.svg" width="30" height="30"> </object>
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="#">Vrai</a>
+                                        <a class="dropdown-item" href="#">Faux</a>
+                                        <!--<a class="dropdown-item" href="#">Yearly Report</a>-->
                                     </div>
                                 </li>
                             </ul>
@@ -80,7 +81,7 @@
                                 <li class="nav-item">
                                     <a class="nav-link d-flex" href="login.html">
                                         <i class="far fa-user mr-2 tm-logout-icon"></i>
-                                        <span>Logout</span>
+                                        <span>Login</span>
                                     </a>
                                 </li>
                             </ul>
@@ -92,73 +93,95 @@
             <div class="row tm-content-row tm-mt-big">
                 <div class="tm-col tm-col-big">
                     <div class="bg-white tm-block h-100">
-                        <h2 class="tm-block-title">Latest Hits</h2>
-                        <canvas id="lineChart"></canvas>
-                    </div>
-                </div>
-                <div class="tm-col tm-col-big">
-                    <div class="bg-white tm-block h-100">
-                        <h2 class="tm-block-title">Performance</h2>
-                        <canvas id="barChart"></canvas>
-                    </div>
-                </div>
-                <div class="tm-col tm-col-small">
-                    <div class="bg-white tm-block h-100">
-                        <canvas id="pieChart" class="chartjs-render-monitor"></canvas>
-                    </div>
-                </div>
+                        <h2 class="tm-block-title">Aperçu du BOS</h2>
+                            <div class="table-responsive">
+                                <table class="table table-hover table-striped tm-table-striped-even mt-3">
+                                    <thead>
+                                        <tr class="tm-bg-Blue">
+                                            <th scope="col">Nom Prénom</th>
+                                            <th scope="col" class="text-center">BOS</th>
+                                            <th scope="col">Date</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id ="myTable">
+                                        <tr>
+                                            <td class="tm-product-name">CHAMI Bilal</td>
+                                            <td class="text-center">BOS</td>
+                                            <td>2018-10-28</td>
 
+                                        </tr>
+                                        <tr>
+
+                                            <td class="tm-product-name">FRATILA Adriana</td>
+                                            <td class="text-center">BOS</td>
+                                            <td>2018-10-24</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tm-product-name">JIE Juan</td>
+                                            <td class="text-center">BOS</td>
+                                            <td>2018-10-28</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tm-product-name">CHAMI Bilal</td>
+                                            <td class="text-center">BOS</td>
+                                            <td>2018-10-28</td>
+    
+                                        </tr>
+                                        <tr>
+    
+                                            <td class="tm-product-name">FRATILA Adriana</td>
+                                            <td class="text-center">BOS</td>
+                                            <td>2018-10-24</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tm-product-name">JIE Juan</td>
+                                            <td class="text-center">BOS</td>
+                                            <td>2018-10-28</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                    </div>
+                </div>
                 <div class="tm-col tm-col-big">
                     <div class="bg-white tm-block h-100">
                         <div class="row">
                             <div class="col-8">
-                                <h2 class="tm-block-title d-inline-block">Top Product List</h2>
+                                <h2 class="tm-block-title d-inline-block">Administration</h2>
 
                             </div>
                             <div class="col-4 text-right">
-                                <a href="products.html" class="tm-link-black">View All</a>
+                                <a href="https://youtu.be/dQw4w9WgXcQ" class="tm-link-black">petite surprise ?</a>
                             </div>
                         </div>
                         <ol class="tm-list-group tm-list-group-alternate-color tm-list-group-pad-big">
                             <li class="tm-list-group-item">
-                                Donec eget libero
+                                Offre de Stage 
                             </li>
                             <li class="tm-list-group-item">
-                                Nunc luctus suscipit elementum
+                                Réunion - Mercredi à 23h00 /!\
                             </li>
                             <li class="tm-list-group-item">
-                                Maecenas eu justo maximus
+                                Offre de Stage
                             </li>
                             <li class="tm-list-group-item">
-                                Pellentesque auctor urna nunc
+                                Offre de Stage
                             </li>
                             <li class="tm-list-group-item">
-                                Sit amet aliquam lorem efficitur
+                                Réunion - Lundi à 13h00 /!\
                             </li>
                             <li class="tm-list-group-item">
-                                Pellentesque auctor urna nunc
+                                Réunion - Jeudi à 8h30 /!\
                             </li>
                             <li class="tm-list-group-item">
-                                Sit amet aliquam lorem efficitur
+                                Offre de Stage
                             </li>
                         </ol>
                     </div>
                 </div>
-                <div class="tm-col tm-col-big">
-                    <div class="bg-white tm-block h-100">
-                        <h2 class="tm-block-title">Calendar</h2>
-                        <div id="calendar"></div>
-                        <div class="row mt-4">
-                            <div class="col-12 text-right">
-                                <a href="#" class="tm-link-black">View Schedules</a>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
                 <div class="tm-col tm-col-small">
                     <div class="bg-white tm-block h-100">
-                        <h2 class="tm-block-title">Upcoming Tasks</h2>
+                        <h2 class="tm-block-title">Dernière notification</h2>
                         <ol class="tm-list-group">
                             <li class="tm-list-group-item">List of tasks</li>
                             <li class="tm-list-group-item">Lorem ipsum doloe</li>
@@ -176,14 +199,14 @@
                     </div>
                 </div>
             </div>
-            <footer class="row tm-mt-small">
+            <!-- <footer class="row tm-mt-small">
                 <div class="col-12 font-weight-light">
                     <p class="d-inline-block tm-bg-black text-white py-2 px-4">
                         Copyright &copy; 2018 Admin Dashboard . Created by
                         <a rel="nofollow" href="https://www.tooplate.com" class="text-white tm-footer-link">Tooplate</a>
                     </p>
                 </div>
-            </footer>
+            </footer> -->
         </div>
     </div>
     <script src="js/jquery-3.3.1.min.js"></script>
